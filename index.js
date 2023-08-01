@@ -50,6 +50,7 @@ function renderGame() {
         hasBlackJack = true
     } else {
         message = "You're out of the game!"
+        playerEl.textContent = ` ${player.name}: $${player.chips -= Math.floor( Math.random()*200 )}`
         isAlive = false
     }
     messageEl.textContent = message
